@@ -1,4 +1,4 @@
-# SINOPSIS API REST TEST
+# CSTI - Culqi - Prueba Técnica Backend Senior
 ***
 ## Introducción
 
@@ -66,6 +66,14 @@ Para ejecutar las pruebas unitarias, se debe ejecutar el siguiente comando en la
 
 ```
     npx jest
+```
+
+## Ejecutar contenedor Redis con Docker
+
+Para ejecutar el contenedor Redis con Docker, se debe ejecutar el siguiente comando en la raíz del proyecto:
+
+```
+    docker-compose up -d
 ```
 
 ## Serverless Offline

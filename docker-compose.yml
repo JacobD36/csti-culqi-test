@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASS}
+      
+  redis-client:
+    image: redis:latest
+    command: ["redis-cli", "-h", "redis", "-a", a2JqbmZxZnNmeTc5]
+    depends_on:
+      - redis
+
+volumes:
+  redis-data:
