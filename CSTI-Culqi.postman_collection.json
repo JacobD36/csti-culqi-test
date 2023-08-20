@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "7c9fcb25-176b-4adc-a7bc-1e92289f99fe",
+		"name": "CSTI-Culqi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10052822"
+	},
+	"item": [
+		{
+			"name": "Create Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "pk_test_lsRBKejzCOEEWosw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"correo@gmail.com\",\r\n    \"card_number\": \"4652568545875859\",\r\n    \"cvv\": \"404\",\r\n    \"expiration_year\": \"2026\",\r\n    \"expiration_month\": \"10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tokens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "pk_test_lsRBKejzCOEEWosw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tokens/UDDoOaLDAS65qkkO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tokens",
+						"UDDoOaLDAS65qkkO"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

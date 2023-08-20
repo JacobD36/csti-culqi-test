@@ -1,0 +1,21 @@
+service: sinapsis-test-service
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+plugins:
+  - serverless-offline
+
+functions:
+  cardsFunction:
+    handler: /dist/app.routesFunction
+    events:
+      - http:
+          path: /tokens
+          method: ANY
+          cors: true
+      - http:
+          path: /tokens/{id}
+          method: ANY
+          cors: true
