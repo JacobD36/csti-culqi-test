@@ -1,4 +1,4 @@
-service: sinapsis-test-service
+service: csti-test-service
 
 provider:
   name: aws
